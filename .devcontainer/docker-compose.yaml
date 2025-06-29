@@ -3,9 +3,9 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-    # volumes:
-    #   - ../:/workspaces/dev-container:cached
-    #   - node_modules:/workspaces/dev-container/node_modules
+    volumes:
+      - ../:/workspaces/dev-container:cached
+      - node_modules:/workspaces/dev-container/node_modules
     command: sleep infinity
   db:
     image: postgres
